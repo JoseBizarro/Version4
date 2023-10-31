@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripción de la Versión</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/7.2.2/pouchdb.min.js"></script>
+
+</head>
+<body>
+    <header class="bg-dark text-light p-4">
+        <h1 class="text-center">Descripción de la Versión</h1>
+    </header>
+    <div class="container mt-4">
+        <h2 id="versionName"></h2>
+        <img id="versionImage" src="" alt="Imagen de la versión" class="img-fluid responsive-image">
+        <p id="versionDescription"></p>
+        <a href="personajes.html" class="btn custom-button mt-3">Regresar</a>
+    </div>
+
+
+
+    <script>
+        // Recupera la información almacenada en localStorage
+const selectedVersion = localStorage.getItem("selectedVersion");
+const selectedCharacter = localStorage.getItem("selectedCharacter");
+const versionDescription = localStorage.getItem("versionDescription");
+
+// Muestra la información en la página
+const versionName = document.getElementById("versionName");
+const versionImage = document.getElementById("versionImage");
+const versionDescriptionElement = document.getElementById("versionDescription");
+
+if (selectedVersion && selectedCharacter && versionDescription) {
+    versionName.textContent = `Versión de ${selectedCharacter}`;
+    versionImage.src = `img/${selectedCharacter}_${selectedVersion}.png`;
+    versionDescriptionElement.textContent = versionDescription;
+} else {
+    // Si no se encuentra la información, redirige de nuevo a la página principal
+    window.location.href = "index.html";
+}
+
+    </script>
+</body>
+</html>
+

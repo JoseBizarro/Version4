@@ -1,0 +1,31 @@
+{
+  "name": "Liga de la Justicia App",
+  "short_name": "LJ App",
+  "description": "Aplicación de la Liga de la Justicia",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#20232A",
+    "icons":[
+        {
+            "src": "img/32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+          },
+          {
+            "src": "img/48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+          },
+          {
+            "src":"img/128x128.png",
+            "sizes":"128x128",
+            "type":"image/png"
+          },
+          {
+            "src":"img/512x512.png",
+            "sizes":"512x512",
+            "type":"image/png"
+          }
+    ]
+}

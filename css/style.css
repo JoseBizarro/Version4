@@ -1,0 +1,179 @@
+body {
+    background-color: #20232A;
+    color: #61dafb;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #161B22;
+    padding: 20px;
+}
+
+#header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#footer {
+    background-color: #161B22;
+    padding: 10px;
+}
+
+/* Establece un tamaño fijo para las imágenes */
+#imagenPersonaje {
+    width: 200px; /* Establece el ancho deseado */
+    height: auto; /* El alto se ajusta automáticamente */
+}
+.small-image {
+    max-width: 200px; /* Tamaño máximo del ancho */
+    height: auto; /* El alto se ajusta automáticamente */
+    display: block; /* Para centrar la imagen */
+    margin: 0 auto; /* Para centrar la imagen */
+}
+#imagenPersonaje, #imagenVersion {
+    width: 300px; /* Ajusta el ancho deseado */
+    height: auto; /* La altura se ajustará automáticamente */
+}
+/* Agrega estilos para el contenedor de la imagen y la descripción */
+/* Agrega estilos para el contenedor de la imagen y la descripción */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para el contenedor de la imagen y descripción */
+.image-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para la imagen de la versión */
+#imagenVersion {
+    transition: transform 0.5s;
+}
+
+/* Estilos para la descripción de la versión */
+.image-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Estilo para mostrar la descripción al hacer hover */
+.image-hover:hover #imagenVersion {
+    transform: scale(1.1);
+}
+
+.image-hover:hover .image-description {
+    opacity: 1;
+}
+/* Estilos para el contenedor de la carta */
+.card-container {
+    perspective: 1000px;
+}
+
+/* Estilos para la carta */
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+/* Estilos para la parte frontal de la carta */
+.card-front {
+    z-index: 2;
+}
+
+/* Estilos para la parte trasera de la carta */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* Estilo para mostrar la parte trasera al hacer hover */
+.card:hover .card {
+    transform: rotateY(180deg);
+}
+.custom-button {
+    background-color: #ff5733; /* Cambia el color de fondo a tu preferencia */
+    color: #fff; /* Cambia el color del texto a tu preferencia */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+/* En tu archivo style.css o dentro de una etiqueta <style> en el encabezado HTML */
+/* Estilo para los selects */
+/* Estilo para los selects */
+select.form-select {
+    padding: 10px; /* Espacio interno del select */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 50%; /* Ancho del 100% del contenedor */
+    border: 1px solid #ccc; /* Borde del select */
+    border-radius: 5px; /* Borde redondeado */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+}
+
+/* Cambia el color de fondo y el borde cuando el select está enfocado */
+select.form-select:focus {
+    border-color: #007BFF; /* Borde azul cuando enfocado */
+}
+
+/* Estilo para las opciones del select */
+select.form-select option {
+    padding: 10px; /* Espacio interno de las opciones */
+    font-size: 16px; /* Tamaño de fuente de las opciones */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color del texto de las opciones */
+}
+
+/* Cambia el color de fondo de las opciones cuando se selecciona */
+select.form-select option:checked {
+    background-color: #007BFF; /* Fondo azul cuando se selecciona */
+    color: #fff; /* Color del texto cuando se selecciona */
+}
+
+/* Cambia el estilo del cursor al pasar sobre las opciones */
+select.form-select option:hover {
+    background-color: #007BFF; /* Fondo azul al pasar el cursor */
+    color: #fff; /* Color del texto al pasar el cursor */
+}
+/* Estilo para hacer las imágenes responsivas */
+img.img-fluid {
+    max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
+    height: auto;
+    width: 50%; /* Permite que la altura se ajuste automáticamente según el ancho */
+}
